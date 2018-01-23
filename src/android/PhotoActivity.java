@@ -47,6 +47,16 @@ public class PhotoActivity extends Activity {
 
 		setContentView(getApplication().getResources().getIdentifier("activity_photo", "layout", getApplication().getPackageName()));
 
+        if(Build.VERSION.SDK_INT>=24){
+           try{
+              Method m = StrictMode.class.getMethod("disableDeathOnFileUriExposure");
+              m.invoke(null);
+           }catch(Exception e){
+              e.printStackTrace();
+           }
+        }
+
+
 		// Load the Views
 		findViews();
 
