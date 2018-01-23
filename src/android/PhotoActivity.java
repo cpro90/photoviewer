@@ -17,6 +17,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Build;
+import android.os.StrictMode;
 
 import com.squareup.picasso.Picasso;
 
@@ -26,6 +28,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 public class PhotoActivity extends Activity {
 	private PhotoViewAttacher mAttacher;
